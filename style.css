@@ -1,0 +1,183 @@
+body {
+    background: #417EC1 url("https://www.newegg.com/insider/wp-content/uploads/2014/04/windows_xp_bliss-wide.jpg") no-repeat;
+    height: 100vh;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+button {
+    cursor: pointer !important;
+}
+
+.main-window {
+    max-width: 800px;
+    width: 90vw;
+    height: 95vh;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-bar-text {
+    cursor: default;
+    user-select: none;
+}
+
+.window-body {
+    margin: 0px 3px 0px 3px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.menu-bar {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-bar span {
+    display: inline-block;
+    padding: 4px 5px 4px 5px;
+    user-select: none;
+    font-family: "Pixelated MS Sans Serif", Arial;
+}
+
+.menu-bar span:hover,
+.dropdown-content p:hover {
+    background-color: #2B68C8;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #7f9db9;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-content p {
+    padding: 5px 100px 5px 15px;
+    margin: 0;
+    font-family: "Pixelated MS Sans Serif", Arial;
+}
+
+.menu-bar div:hover .dropdown-content {
+    display: block !important;
+}
+
+.chat-container {
+    overflow-y: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tree-view {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    padding: 0px 20px !important;
+    display: flex !important;
+    height: 100%;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+/* scroll fix */
+.tree-view> :first-child {
+    margin-top: auto !important
+}
+
+.message {
+    margin: 0px !important;
+    margin-bottom: 10px !important;
+    font-size: 0.9rem;
+}
+
+.status-message {
+    text-align: right;
+    color: #666;
+}
+
+.main-window form {
+    display: flex;
+}
+
+.main-window input {
+    height: 25px;
+    width: 100%;
+    border: 0;
+    border-right: 1px solid #7f9db9;
+    padding: 0px 20px;
+    font-size: 0.9rem !important;
+}
+
+input:hover,
+input:focus {
+    outline: 0 !important;
+}
+
+.new-window {
+    z-index: 2;
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.new-window .window-body p {
+    text-align: center;
+    margin: 0 10px 5px 10px;
+    width: 180px;
+}
+
+.new-window .window-body p:nth-child(1) {
+    margin-top: 10px;
+}
+
+.nw-form-inputs {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.nw-form-inputs input {
+    margin: 5px;
+    width: 95%;
+}
+
+.nw-form-inputs label {
+    margin: 5px 5px 0 5px;
+}
+
+.new-window .field-row {
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+em {
+    color: gray;
+}
+
+li {
+    min-width: 0;
+    word-wrap: break-word;
+}
+
+.change-color {
+    margin-bottom: 5px !important;
+    padding: 5px 20px 8px 10px !important;
+}
+
+select {
+    background-color: white !important;
+    color: #222 !important;
+}
